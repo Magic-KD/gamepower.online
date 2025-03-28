@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamePower - Play Free Online Browser Games | gamepower.online</title>
+    <meta name="description" content="Discover and play premium-quality browser games across various genres. Enjoy Strategy, Puzzle, and Adventure games optimized for all devices.">
+    <link rel="canonical" href="https://gamepower.online">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .game-card:hover .game-frame {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+        .search-shadow:focus {
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- Navigation Header -->
+    <header class="container mx-auto px-4 py-6">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-500">
+            GamePower Online
+        </h1>
+        
+        <!-- Search Bar -->
+        <div class="max-w-2xl mx-auto mb-12">
+            <input type="search" 
+                   placeholder="Search games by name or genre..." 
+                   class="w-full px-6 py-3 rounded-xl border border-gray-200 dark:border-gray-700 search-shadow bg-white dark:bg-gray-800">
+        </div>
+
+        <!-- Category Navigation -->
+        <nav class="flex flex-wrap justify-center gap-4 mb-8">
+            <a href="#strategy" class="px-4 py-2 rounded-lg bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">Strategy</a>
+            <a href="#puzzle" class="px-4 py-2 rounded-lg bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300">Puzzle</a>
+            <a href="#adventure" class="px-4 py-2 rounded-lg bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300">Adventure</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pb-12">
+        <!-- Strategy Games Section -->
+        <section id="strategy" class="mb-16">
+            <h2 class="text-3xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Strategy Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Monster Survivors -->
+                <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-video bg-gray-100 dark:bg-gray-700">
+                        <iframe src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
+                                class="w-full h-full game-frame"
+                                loading="lazy"
+                                title="Monster Survivors Strategy Game"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Monster Survivors</h3>
+                        <span class="text-sm px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">Strategy</span>
+                        <p class="mt-4 text-gray-600 dark:text-gray-300">
+                            Tactical survival game where you lead monster squads through dynamic battlefields. 
+                            Manage resources, evolve creatures, and conquer territories.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Puzzle Games Section -->
+        <section id="puzzle" class="mb-16">
+            <h2 class="text-3xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Puzzle Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Six Cats Under -->
+                <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-video bg-gray-100 dark:bg-gray-700">
+                        <iframe src="https://teambeanloop.itch.io/six-cats-under"
+                                class="w-full h-full game-frame"
+                                loading="lazy"
+                                title="Six Cats Under Puzzle Game"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Six Cats Under</h3>
+                        <span class="text-sm px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300">Puzzle</span>
+                        <p class="mt-4 text-gray-600 dark:text-gray-300">
+                            Charming feline puzzle adventure with physics-based challenges. 
+                            Solve cat-astic puzzles using unique kitty abilities.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Adventure Games Section -->
+        <section id="adventure" class="mb-16">
+            <h2 class="text-3xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Adventure Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Black Out -->
+                <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-video bg-gray-100 dark:bg-gray-700">
+                        <iframe src="https://freshgames.itch.io/blackout"
+                                class="w-full h-full game-frame"
+                                loading="lazy"
+                                title="Black Out Adventure Game"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Black Out</h3>
+                        <span class="text-sm px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300">Adventure</span>
+                        <p class="mt-4 text-gray-600 dark:text-gray-300">
+                            Atmospheric narrative-driven experience set in a mysterious blackout-ridden city. 
+                            Make choices that shape your survival story.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Vampire Survivors -->
+                <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-video bg-gray-100 dark:bg-gray-700">
+                        <iframe src="https://poncle.itch.io/vampire-survivors"
+                                class="w-full h-full game-frame"
+                                loading="lazy"
+                                title="Vampire Survivors Adventure Game"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Vampire Survivors</h3>
+                        <span class="text-sm px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300">Adventure</span>
+                        <p class="mt-4 text-gray-600 dark:text-gray-300">
+                            Gothic action RPG with roguelike elements. 
+                            Battle hordes of night creatures and unlock vampiric powers.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+            © 2024 gamepower.online - Premium Browser Gaming Experience
+        </div>
+    </footer>
+</body>
+</html>
