@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamePower - Play Free Online Browser Games | gamepower.online</title>
-    <meta name="description" content="Discover and play premium-quality browser games across various genres. Enjoy Strategy, Puzzle, and Adventure games optimized for all devices.">
+    <meta name="description" content="Discover 1000+ free online games across various genres. Play action, strategy, sports and fun games directly in your browser.">
     <link rel="canonical" href="https://gamepower.online">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .game-card:hover .game-frame {
-            transform: scale(1.02);
-            transition: transform 0.3s ease;
+        .game-card:hover {
+            transform: translateY(-4px);
+            transition: transform 0.2s ease;
         }
-        .search-shadow:focus {
-            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        .tag-filter {
+            transition: all 0.2s ease;
+        }
+        .tag-filter:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -25,117 +28,211 @@
         </h1>
         
         <!-- Search Bar -->
-        <div class="max-w-2xl mx-auto mb-12">
+        <div class="max-w-3xl mx-auto mb-8">
             <input type="search" 
-                   placeholder="Search games by name or genre..." 
-                   class="w-full px-6 py-3 rounded-xl border border-gray-200 dark:border-gray-700 search-shadow bg-white dark:bg-gray-800">
+                   id="searchInput"
+                   placeholder="Search games by name, genre or tag..." 
+                   class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 dark:border-gray-700 focus:ring-4 focus:ring-blue-300 bg-white dark:bg-gray-800">
         </div>
 
-        <!-- Category Navigation -->
-        <nav class="flex flex-wrap justify-center gap-4 mb-8">
-            <a href="#strategy" class="px-4 py-2 rounded-lg bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">Strategy</a>
-            <a href="#puzzle" class="px-4 py-2 rounded-lg bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300">Puzzle</a>
-            <a href="#adventure" class="px-4 py-2 rounded-lg bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300">Adventure</a>
-        </nav>
+        <!-- Category Filters -->
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+            <button data-filter="all" class="tag-filter px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700">All Games</button>
+            <button data-filter="strategy" class="tag-filter px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900">Strategy</button>
+            <button data-filter="action" class="tag-filter px-4 py-2 rounded-full bg-red-100 dark:bg-red-900">Action</button>
+            <button data-filter="sports" class="tag-filter px-4 py-2 rounded-full bg-green-100 dark:bg-green-900">Sports</button>
+            <button data-filter="fun" class="tag-filter px-4 py-2 rounded-full bg-yellow-100 dark:bg-yellow-900">Fun</button>
+        </div>
     </header>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 pb-12">
-        <!-- Strategy Games Section -->
-        <section id="strategy" class="mb-16">
-            <h2 class="text-3xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Strategy Games</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Strategy Games -->
+        <section class="mb-16" data-game-type="strategy">
+            <h2 class="text-3xl font-semibold mb-8">Strategy Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 <!-- Monster Survivors -->
                 <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
                     <div class="aspect-video bg-gray-100 dark:bg-gray-700">
                         <iframe src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
-                                class="w-full h-full game-frame"
+                                class="w-full h-full"
                                 loading="lazy"
                                 title="Monster Survivors Strategy Game"></iframe>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Monster Survivors</h3>
-                        <span class="text-sm px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">Strategy</span>
-                        <p class="mt-4 text-gray-600 dark:text-gray-300">
-                            Tactical survival game where you lead monster squads through dynamic battlefields. 
-                            Manage resources, evolve creatures, and conquer territories.
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Monster</span>
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Survivor</span>
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">2D</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Strategic survival game with intense monster battles. Manage resources and build defenses.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Survival Island -->
+                <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-video bg-gray-100 dark:bg-gray-700">
+                        <iframe src="https://cloud.onlinegames.io/games/2024/unity2/survival-island/index-og.html"
+                                class="w-full h-full"
+                                loading="lazy"
+                                title="Survival Island Strategy Game"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Survival Island</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">3D</span>
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Crafting</span>
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Survival</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Island survival simulator with crafting system and dynamic weather challenges.
                         </p>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Puzzle Games Section -->
-        <section id="puzzle" class="mb-16">
-            <h2 class="text-3xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Puzzle Games</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Six Cats Under -->
+        <!-- Action Games Section -->
+        <section class="mb-16" data-game-type="action">
+            <h2 class="text-3xl font-semibold mb-8">Action Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <!-- Drift King -->
                 <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
                     <div class="aspect-video bg-gray-100 dark:bg-gray-700">
-                        <iframe src="https://teambeanloop.itch.io/six-cats-under"
-                                class="w-full h-full game-frame"
+                        <iframe src="https://www.onlinegames.io/games/2024/unity/drift-king/index.html"
+                                class="w-full h-full"
                                 loading="lazy"
-                                title="Six Cats Under Puzzle Game"></iframe>
+                                title="Drift King Racing Game"></iframe>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Six Cats Under</h3>
-                        <span class="text-sm px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300">Puzzle</span>
-                        <p class="mt-4 text-gray-600 dark:text-gray-300">
-                            Charming feline puzzle adventure with physics-based challenges. 
-                            Solve cat-astic puzzles using unique kitty abilities.
+                        <h3 class="text-xl font-semibold mb-2">Drift King</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Racing</span>
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">3D</span>
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Car</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            High-speed drifting game with realistic car physics and dynamic tracks.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Masked Special Forces -->
+                <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-video bg-gray-100 dark:bg-gray-700">
+                        <iframe src="https://www.onlinegames.io/games/2022/unity2/masked-special-forces/index.html"
+                                class="w-full h-full"
+                                loading="lazy"
+                                title="Masked Special Forces Action Game"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Masked Special Forces</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Shooting</span>
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">3D</span>
+                            <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Battle</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Intense tactical combat game with special forces operations.
                         </p>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Adventure Games Section -->
-        <section id="adventure" class="mb-16">
-            <h2 class="text-3xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Adventure Games</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                <!-- Black Out -->
-                <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-                    <div class="aspect-video bg-gray-100 dark:bg-gray-700">
-                        <iframe src="https://freshgames.itch.io/blackout"
-                                class="w-full h-full game-frame"
-                                loading="lazy"
-                                title="Black Out Adventure Game"></iframe>
+        <!-- Sports Games Section -->
+        <section class="mb-16" data-game-type="sports">
+            <h2 class="text-3xl font-semibold mb-8">Sports Games</h2>
+            <!-- Basket Hoop -->
+            <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <div class="aspect-video bg-gray-100 dark:bg-gray-700">
+                    <iframe src="https://cloud.onlinegames.io/games/2024/construct/311/basket-hoop/index-og.html"
+                            class="w-full h-full"
+                            loading="lazy"
+                            title="Basket Hoop Sports Game"></iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Basket Hoop</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Basketball</span>
+                        <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">3D</span>
+                        <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Fun</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Black Out</h3>
-                        <span class="text-sm px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300">Adventure</span>
-                        <p class="mt-4 text-gray-600 dark:text-gray-300">
-                            Atmospheric narrative-driven experience set in a mysterious blackout-ridden city. 
-                            Make choices that shape your survival story.
-                        </p>
-                    </div>
-                </article>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Dynamic basketball game with realistic physics and multiple game modes.
+                    </p>
+                </div>
+            </article>
+        </section>
 
-                <!-- Vampire Survivors -->
-                <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-                    <div class="aspect-video bg-gray-100 dark:bg-gray-700">
-                        <iframe src="https://poncle.itch.io/vampire-survivors"
-                                class="w-full h-full game-frame"
-                                loading="lazy"
-                                title="Vampire Survivors Adventure Game"></iframe>
+        <!-- Fun Games Section -->
+        <section data-game-type="fun">
+            <h2 class="text-3xl font-semibold mb-8">Fun Games</h2>
+            <!-- Cookie Clicker Pro -->
+            <article class="game-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <div class="aspect-video bg-gray-100 dark:bg-gray-700">
+                    <iframe src="https://cloud.onlinegames.io/games/2025/unity/cookie-clicker-pro/index-og.htmll"
+                            class="w-full h-full"
+                            loading="lazy"
+                            title="Cookie Clicker Pro Fun Game"></iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Cookie Clicker Pro</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Clicker</span>
+                        <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">2D</span>
+                        <span class="tag-filter px-2 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700">Funny</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Vampire Survivors</h3>
-                        <span class="text-sm px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300">Adventure</span>
-                        <p class="mt-4 text-gray-600 dark:text-gray-300">
-                            Gothic action RPG with roguelike elements. 
-                            Battle hordes of night creatures and unlock vampiric powers.
-                        </p>
-                    </div>
-                </article>
-            </div>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Addictive cookie-clicking game with power-ups and crazy upgrades.
+                    </p>
+                </div>
+            </article>
         </section>
     </main>
 
-    <footer class="border-t border-gray-200 dark:border-gray-700">
+    <footer class="border-t border-gray-200 dark:border-gray-700 mt-12">
         <div class="container mx-auto px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-            © 2024 gamepower.online - Premium Browser Gaming Experience
+            © 2024 gamepower.online - Play Free Browser Games
         </div>
     </footer>
+
+    <script>
+        // Basic search and filter functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const games = document.querySelectorAll('.game-card');
+            const filters = document.querySelectorAll('[data-filter]');
+
+            function filterGames() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const activeFilter = document.querySelector('[data-filter].active')?.dataset.filter;
+
+                games.forEach(game => {
+                    const gameType = game.closest('section').dataset.gameType;
+                    const gameTitle = game.querySelector('h3').textContent.toLowerCase();
+                    const gameTags = Array.from(game.querySelectorAll('.tag-filter')).map(tag => tag.textContent.toLowerCase());
+                    
+                    const matchSearch = gameTitle.includes(searchTerm) || gameTags.some(tag => tag.includes(searchTerm));
+                    const matchFilter = activeFilter === 'all' || activeFilter === gameType;
+
+                    game.style.display = (matchSearch && matchFilter) ? 'block' : 'none';
+                });
+            }
+
+            filters.forEach(filter => {
+                filter.addEventListener('click', () => {
+                    filters.forEach(f => f.classList.remove('active'));
+                    filter.classList.add('active');
+                    filterGames();
+                });
+            });
+
+            searchInput.addEventListener('input', filterGames);
+        });
+    </script>
 </body>
 </html>
